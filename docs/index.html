@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="bg-pink-400 w-screen h-screen grid place-content-center">
+        <!-- card -->
+        <div class="w-[20rem] h-[36rem] bg-white rounded-xl shadow-xl py-3 px-4 animate__animated animate__fadeInDown">
+            <h1 class="text-center font-bold uppercase text-pink-400 text-xl animate__animated animate__tada animate__delay-2s animate__infinite ">🎉Happy Birthday🎉</h1>
+            <div class="container">
+                <img src="../src/assets/nisa.jpeg" alt="You" class="w-44 h-44 rounded-full mx-auto mt-4 shadow-xl mb-3">
+                <h1 class="text-wrap font-bold text-center text-pink-600 w-44 mx-auto mb-3">Khairulnisa Azzahra Christin Fadillah</h1>
+                <div class="w-56 h-28 bg-pink-400 mx-auto py-2 px-3 rounded-lg">
+                    <p class="text-white font-semibold mb-5">Haii, aku buat website ini spesial buat ulang tahun kamu yang ke-17 ini, semoga kamu suka!!!</p>
+                </div>
+                <div class="rounded-xl w-64 h-10 bg-pink-400 flex items-center justify-center mx-auto mt-10 hover:bg-pink-500 animate__animated animate__pulse animate__delay-2s animate__infinite" id="button"><p class="font-bold text-xl text-white " onclick="pindah()" >LANJUT</p></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        const tombol = document.querySelector('#button')
+        tombol.addEventListener('click', function pindah(){
+            window.location.href = 'pages/index.html'
+        })
+
+        // Confetti
+        const defaults = {
+  spread: 360,
+  ticks: 100,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 30,
+  shapes: ["heart"],
+  colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
+};
+
+confetti({
+  ...defaults,
+  particleCount: 50,
+  scalar: 2,
+});
+
+confetti({
+  ...defaults,
+  particleCount: 25,
+  scalar: 3,
+});
+
+confetti({
+  ...defaults,
+  particleCount: 10,
+  scalar: 4,
+});
+    </script>
+    
+</body>
+</html>
